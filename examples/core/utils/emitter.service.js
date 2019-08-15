@@ -11,7 +11,7 @@ function dispatch(componentName, eventName, params) {
     parent = parent.$parent
 
     if (parent) {
-      [name] = [parent.$options.name]
+      ;[name] = [parent.$options.name]
     }
   }
   if (parent) {
