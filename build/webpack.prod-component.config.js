@@ -16,8 +16,8 @@ const webpackConfig = merge(webpackBaseConfig, {
 
   output: {
     path: path.resolve(__dirname, '../lib'),
-    filename: 'lib.js',
-    library: 'lib',
+    filename: 'iview-extensions.js',
+    library: 'iview-extensions',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

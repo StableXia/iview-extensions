@@ -1,18 +1,16 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('./iconfont/fonts/iconfont.eot?t=1538229702035'); /* IE9*/
-  src: url('./iconfont/fonts/iconfont.eot?t=1538229702035#iefix')
+  src: url('./fonts/iconfont.eot?t=1538229702035'); /* IE9*/
+  src: url('./fonts/iconfont.eot?t=1538229702035#iefix')
       format('embedded-opentype'),
-    /* IE6-IE8 */ url('./iconfont/fonts/iconfont.woff?t=1538229702035')
-      format('svg'),
-    url('./iconfont/fonts/iconfont.ttf?t=1538229702035') format('truetype'),
+    /* IE6-IE8 */ url('./fonts/iconfont.woff?t=1538229702035') format('svg'),
+    url('./fonts/iconfont.ttf?t=1538229702035') format('truetype'),
     /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-      url('./iconfont/fonts/iconfont.svg?t=1538229702035#iconfont')
-      format('svg'); /* iOS 4.1- */
+      url('./fonts/iconfont.svg?t=1538229702035#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .ac-icon {
-  font-family: 'iconfont' !important;
+  font-family: 'iconfont';
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

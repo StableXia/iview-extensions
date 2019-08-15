@@ -18,14 +18,14 @@ gulp.task('css', function() {
     )
     .pipe(cleanCSS())
     .pipe(rename('iview-extensions.css'))
-    .pipe(gulp.dest('../iview-extensions/styles'))
+    .pipe(gulp.dest('../lib/styles'))
 })
 
 // Copy font file
 gulp.task('fonts', function() {
   gulp
     .src('../src/styles/iconfont/fonts/*.*')
-    .pipe(gulp.dest('../iview-extensions/styles/fonts'))
+    .pipe(gulp.dest('../lib/styles/fonts'))
 })
 
 gulp.task('default', ['css', 'fonts'])
