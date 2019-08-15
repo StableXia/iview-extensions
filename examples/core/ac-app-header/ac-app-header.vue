@@ -1,12 +1,31 @@
 <template>
-  <ac-toolbar :class="['ac-app-header']" :height="48" :withShadow="true" :forApp="true">
-    <ac-toolbar-title :width="titleWidth" :class="{'ac-layout--center-justify': navCollapsed, 'ac-layout--around-justify': !navCollapsed}">
-      <ac-tooltip content="AC" placement="right" :disabled="!navCollapsed">
+  <ac-toolbar
+    :class="['ac-app-header']"
+    :height="48"
+    :withShadow="true"
+    :forApp="true"
+  >
+    <ac-toolbar-title
+      :width="titleWidth"
+      :class="{
+        'ac-layout--center-justify': navCollapsed,
+        'ac-layout--around-justify': !navCollapsed
+      }"
+    >
+      <ac-tooltip
+        content="iview-extensions"
+        placement="right"
+        :disabled="!navCollapsed"
+      >
         <div class="ac-layout ac-layout--center-items">
-          <div  class="ac-app-header__logo ac-layout ac-layout--center-items ac-layout--center-justify">
+          <div
+            class="ac-app-header__logo ac-layout ac-layout--center-items ac-layout--center-justify"
+          >
             <ac-icon type="QQ" size="large"></ac-icon>
           </div>
-          <span v-show="!navCollapsed" class="ac-app-header__title">AC</span>
+          <span v-show="!navCollapsed" class="ac-app-header__title"
+            >iview-extensions</span
+          >
         </div>
       </ac-tooltip>
     </ac-toolbar-title>
@@ -40,34 +59,34 @@
 </style>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
-import { StoreNamespace } from '$examples/store/store-namespace.data';
+import { mapState, mapMutations } from 'vuex'
+import { StoreNamespace } from '$examples/store/store-namespace.data'
 
 export default {
   name: 'AcAppHeader',
 
   data() {
     return {
-      version: '',
-    };
+      version: ''
+    }
   },
 
   computed: {
     titleWidth() {
-      return this.navCollapsed ? 48 : undefined;
+      return this.navCollapsed ? 48 : undefined
     },
     ...mapState(StoreNamespace.CORE_STORE_MODULE, {
-      navCollapsed: state => state.navCollapsed,
-    }),
+      navCollapsed: state => state.navCollapsed
+    })
   },
-  
+
   methods: {
     onClickNavTrigger() {
-      this.toggleNav();
+      this.toggleNav()
     },
     ...mapMutations(StoreNamespace.CORE_STORE_MODULE, {
-      toggleNav: 'toggleNav',
-    }),
-  },
-};
+      toggleNav: 'toggleNav'
+    })
+  }
+}
 </script>

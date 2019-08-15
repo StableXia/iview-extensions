@@ -17,15 +17,15 @@ gulp.task('css', function() {
       })
     )
     .pipe(cleanCSS())
-    .pipe(rename('ac-component.css'))
-    .pipe(gulp.dest('../ac-component/styles'))
+    .pipe(rename('iview-extensions.css'))
+    .pipe(gulp.dest('../iview-extensions/styles'))
 })
 
 // Copy font file
 gulp.task('fonts', function() {
   gulp
     .src('../src/styles/iconfont/fonts/*.*')
-    .pipe(gulp.dest('../ac-component/styles/fonts'))
+    .pipe(gulp.dest('../iview-extensions/styles/fonts'))
 })
 
 gulp.task('default', ['css', 'fonts'])

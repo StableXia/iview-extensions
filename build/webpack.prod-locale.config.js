@@ -35,10 +35,10 @@ const webpackConfig = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, '../ac-component/locale'),
-    publicPath: '/ac-component/locale/',
+    path: path.resolve(__dirname, '../lib/locale'),
+    publicPath: '/lib/locale/',
     filename: '[name].js',
-    library: 'ac-component/locale',
+    library: 'lib/locale',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

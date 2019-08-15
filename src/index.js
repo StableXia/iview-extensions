@@ -61,7 +61,7 @@ const API = {
 }
 
 API.lang = code => {
-  const langObject = window['ac-component/locale'].default
+  const langObject = window['lib/locale'].default
 
   if (code === langObject.ac.locale) {
     locale.use(langObject)

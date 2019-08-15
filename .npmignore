@@ -1,0 +1,11 @@
+build/
+config/
+dist/
+examples/
+node_modules/
+src/
+.babelrc
+.editorconfig
+.prettierrc
+
+

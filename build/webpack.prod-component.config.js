@@ -15,9 +15,9 @@ const webpackConfig = merge(webpackBaseConfig, {
   },
 
   output: {
-    path: path.resolve(__dirname, '../ac-component'),
-    filename: 'ac-component.js',
-    library: 'ac-component',
+    path: path.resolve(__dirname, '../lib'),
+    filename: 'lib.js',
+    library: 'lib',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

@@ -2,7 +2,7 @@
   "name": "iview-extensions",
   "version": "1.0.0",
   "description": "iview组件库扩展",
-  "main": "index.js",
+  "main": "lib/lib.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.config.js & npm run format",
     "build": "node build/webpack.prod.config.js",
@@ -10,6 +10,7 @@
     "build-component-style": "gulp --gulpfile build/build-style.config.js",
     "build-component-locale": "node build/webpack.prod-locale.config.js",
     "format": "onchange 'src/' 'examples/' -- prettier --write {{changed}}",
+    "prepublish": "npm run build-component & npm run build-component-style & npm run build-component-locale",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
