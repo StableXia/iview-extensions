@@ -21,7 +21,7 @@ $ npm install iview-extensions
 Using css via import:
 
 ```js
-import 'iview-extensions/lib/styles/lib.css';
+import 'iview-extensions/lib/styles/iview-extensions.css';
 ```
 
 ## License

@@ -2,7 +2,7 @@
   "name": "iview-extensions",
   "version": "1.0.0",
   "description": "iview组件库扩展",
-  "main": "lib/lib.js",
+  "main": "lib/iview-extensions.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.config.js & npm run format",
     "build": "node build/webpack.prod.config.js",
