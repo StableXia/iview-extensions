@@ -13,7 +13,7 @@ gulp.task('css', function() {
     .pipe(scss())
     .pipe(
       autoprefixer({
-        browsers: ['last 2 versions', 'ie > 8']
+        overrideBrowserslist: ['last 2 versions', 'ie > 8']
       })
     )
     .pipe(cleanCSS())

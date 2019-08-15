@@ -1,5 +1,3 @@
-/* eslint no-extra-semi: 0 */
-
 /**
  * Upwards, cross level
  * @param  {String} componentName
@@ -8,12 +6,12 @@
  */
 function dispatch(componentName, eventName, params) {
   let parent = this.$parent || this.$root
-  let [name] = [parent.$options.name]
+  let name = parent.$options.name
   while (parent && (!name || name !== componentName)) {
     parent = parent.$parent
 
     if (parent) {
-      ;[name] = [parent.$options.name]
+      name = parent.$options.name
     }
   }
   if (parent) {
