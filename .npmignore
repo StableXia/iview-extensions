@@ -7,5 +7,7 @@ src/
 .babelrc
 .editorconfig
 .prettierrc
+.eslintrc.js
+index.html
 
 
