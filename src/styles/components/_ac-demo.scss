@@ -1,0 +1,59 @@
+// ac-demo
+.ac-demo {
+  border: 1px solid $color-border;
+  border-radius: 6px;
+
+  &__case {
+    &__top {
+      padding: $padding-primary;
+    }
+
+    &__middle {
+      &__title {
+        padding: 0 $padding-primary-small/2 0 $padding-primary-large/3;
+        a {
+          padding-left: $padding-primary-small/4;
+          opacity: 0;
+          transition: opacity 0.2s ease-in-out;
+        }
+        &:hover a {
+          opacity: 1;
+        }
+      }
+      &__split {
+        height: 1px;
+        background: $color-border;
+        &--fix-width {
+          width: 16px;
+        }
+      }
+    }
+
+    &__bottom {
+      padding: $padding-primary;
+
+      code {
+        background: $color-background-common-dark;
+        display: inline-block;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__split {
+    border: 1px dashed $color-divider;
+  }
+
+  &__code {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+
+    &__actions {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+    }
+  }
+}

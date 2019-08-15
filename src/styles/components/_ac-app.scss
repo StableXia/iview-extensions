@@ -1,0 +1,24 @@
+// ac-app
+.ac-app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: $color-background-mat;
+  color: $color-text;
+  &__header {
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  &__nav {
+    overflow: hidden;
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__footer {
+    overflow: hidden;
+  }
+}

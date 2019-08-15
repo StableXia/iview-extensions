@@ -1,0 +1,210 @@
+// ac-nav
+.ac-nav {
+  height: 100%;
+  background-color: $color-background-common;
+  overflow: auto;
+
+  &__view {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__expand-trigger {
+    min-height: 32px;
+    cursor: pointer;
+    border-bottom: 1px solid $color-divider;
+
+    &:hover {
+      color: $color-text-highlight;
+    }
+  }
+
+  /* for dark theme */
+  &--dark {
+    background-color: $color--dark--background-common;
+    color: $color--dark--text;
+
+    & > #{BEM_getParen()}__expand-trigger {
+      border-bottom-color: $color--dark--divider;
+
+      &:hover {
+        color: $color--dark--text-highlight;
+      }
+    }
+  }
+
+  /* for trans-dark theme */
+  &--trans-dark {
+    background-color: $color--trans-dark--background-common;
+    color: $color--trans-dark--text;
+
+    & > #{BEM_getParen()}__expand-trigger {
+      border-bottom-color: $color--trans-dark--divider;
+
+      &:hover {
+        color: $color--trans-dark--text-highlight;
+      }
+    }
+  }
+}
+
+// ac-nav-item
+.ac-nav-item {
+  overflow: visible;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+
+  /* little hack for tooltip working on block element */
+  .ac-tooltip-rel {
+    display: block;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 0;
+    border-left: solid 3px transparent;
+  }
+
+  &--selected {
+    &::before {
+      border-left-color: $color-primary;
+    }
+  }
+
+  &__inner {
+    padding: 0 16px;
+    min-height: 48px;
+
+    &:hover {
+      background-color: $color-background-highlight;
+      color: $color-text-highlight;
+    }
+
+    &--collapsed {
+      padding: 0;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    overflow: hidden;
+  }
+
+  /* for dark theme */
+  &--dark {
+    &::before {
+      display: none;
+    }
+
+    &#{BEM_getParent()}--selected {
+      background-color: $color-primary;
+      color: $color-primary-text;
+    }
+
+    & > #{BEM_getParent()}__inner {
+      &:hover {
+        background-color: $color--dark--background-highlight;
+        color: $color--dark--text-highlight;
+      }
+    }
+  }
+
+  /* for trans-dark theme */
+  &--trans-dark {
+    &::before {
+      display: none;
+    }
+
+    &#{BEM_getParent()}--selected {
+      background-color: $color-primary;
+      color: $color-primary-text;
+    }
+
+    & > #{BEM_getParent()}__inner {
+      &:hover {
+        background-color: $color--trans-dark--background-highlight;
+        color: $color--trans-dark--text-highlight;
+      }
+    }
+  }
+}
+
+// ac-nav-group
+.ac-nav-group {
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    background-color: $color-background-common-dark;
+
+    &--expanded {
+      display: block;
+    }
+
+    &--nested-level-1 {
+      background-color: $color-background-common-very-dark;
+    }
+  }
+
+  &--selected {
+    & > #{BEM_getParent()}__title {
+      color: $color-text-highlight;
+    }
+  }
+
+  /* for dark theme */
+  &--dark {
+    & > #{BEM_getParent()}__items {
+      background-color: $color--dark--background-common-dark;
+
+      &--nested-level-1 {
+        background-color: $color--dark--background-common-very-dark;
+      }
+    }
+
+    &#{BEM_getParent()}--selected {
+      & > #{BEM_getParent()}__title {
+        color: $color--dark--text-highlight;
+      }
+    }
+  }
+
+  /* for trans-dark theme */
+  &--trans-dark {
+    & > #{BEM_getParent()}__items {
+      background-color: $color--trans-dark--background-common-dark;
+
+      &--nested-level-1 {
+        background-color: $color--trans-dark--background-common-very-dark;
+      }
+    }
+
+    &#{BEM_getParent()}--selected {
+      & > #{BEM_getParent()}__title {
+        color: $color--trans-dark--text-highlight;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// ac-icon
+.ac-icon {
+  display: inline-block;
+
+  & > * {
+    display: block;
+  }
+
+  &--middle {
+    vertical-align: middle;
+  }
+
+  &--bottom {
+    vertical-align: bottom;
+  }
+
+  &--block {
+    display: block;
+  }
+}
+
+// ac-icon-tip
+.ac-icon-tip {
+  &__text {
+    padding-left: $padding-primary-small / 2;
+  }
+}

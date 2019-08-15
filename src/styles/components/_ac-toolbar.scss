@@ -1,0 +1,37 @@
+// ac-toolbar
+.ac-toolbar {
+  width: 100%;
+  overflow: visible;
+  background-color: $color-background-common-light;
+
+  &--shadow {
+    @include normalized-shadow(2);
+  }
+
+  &--for-app {
+    background-color: $color-primary;
+    color: $color-primary-text;
+  }
+}
+
+// ac-toolbar__title
+.ac-toolbar__title {
+  overflow: visible;
+  background-color: $color-background-common-very-dark;
+
+  &--for-app {
+    background-color: $color-primary-dark;
+    color: $color-primary-dark-text;
+  }
+}
+
+// ac-toolbar__filling
+.ac-toolbar__filling {
+  overflow: hidden;
+}
+
+// ac-toolbar__block
+.ac-toolbar__block {
+  overflow: visible;
+  padding: 0 16px;
+}

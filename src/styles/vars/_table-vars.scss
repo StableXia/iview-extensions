@@ -1,0 +1,14 @@
+$table-small-cell-padding: 4px;
+$table-medium-cell-padding: 8px;
+$table-large-cell-padding: 16px;
+
+@mixin ac-table-cell-sizes() {
+  &--small {
+    padding: $table-small-cell-padding;
+  }
+  &--large {
+    padding: $table-large-cell-padding;
+  }
+}
+
+$table-col-resizer-width: 10px;

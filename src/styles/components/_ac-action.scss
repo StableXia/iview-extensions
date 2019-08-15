@@ -1,0 +1,27 @@
+// ac-action-filling
+.ac--action__filling {
+  overflow: hidden;
+}
+
+// ac-action-block component
+.ac-action__block {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+
+  &--highlight {
+    &:hover {
+      background-color: $color-background-highlight;
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    color: $color-text-disabled;
+
+    & > * {
+      pointer-events: none;
+      color: $color-text-disabled;
+    }
+  }
+}

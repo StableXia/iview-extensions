@@ -1,0 +1,102 @@
+$tooltip-prefix-cls: 'ac-tooltip';
+$tooltip-arrow: '#{$tooltip-prefix-cls}-arrow';
+$tooltip-max-width: 250px;
+$tooltip-arrow-width: 5px;
+$tooltip-distance: $tooltip-arrow-width - 1 + 4;
+$tooltip-color: #fff;
+
+$border-radius-small: 4px;
+$shadow-base: 0 1px 6px rgba(0, 0, 0, 0.2);
+$text-color: #515a6e;
+
+$tooltip-arrow-width-light: 7px;
+$tooltip-distance-light: $tooltip-arrow-width-light - 1 + 4;
+$tooltip-arrow-outer-width-light: ($tooltip-arrow-width-light + 1);
+$tooltip-arrow-color: hsla(0, 0%, 85%, 0.5);
+$tooltip-bg: rgba(70, 76, 91, 0.9);
+
+@mixin popper($arrow, $arrow-width, $arrow-distance, $bg) {
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.5;
+  position: absolute;
+  z-index: 1060;
+
+  &[x-placement^='top'] {
+    padding: $arrow-width 0 $arrow-distance 0;
+  }
+  &[x-placement^='right'] {
+    padding: 0 $arrow-width 0 $arrow-distance;
+  }
+  &[x-placement^='bottom'] {
+    padding: $arrow-distance 0 $arrow-width 0;
+  }
+  &[x-placement^='left'] {
+    padding: 0 $arrow-distance 0 $arrow-width;
+  }
+
+  &[x-placement^='top'] .#{$arrow} {
+    bottom: $arrow-distance - $arrow-width;
+    border-width: $arrow-width $arrow-width 0;
+    border-top-color: $bg;
+  }
+  &[x-placement='top'] .#{$arrow} {
+    left: 50%;
+    margin-left: -$arrow-width;
+  }
+  &[x-placement='top-start'] .#{$arrow} {
+    left: 16px;
+  }
+  &[x-placement='top-end'] .#{$arrow} {
+    right: 16px;
+  }
+
+  &[x-placement^='right'] .#{$arrow} {
+    left: $arrow-distance - $arrow-width;
+    border-width: $arrow-width $arrow-width $arrow-width 0;
+    border-right-color: $bg;
+  }
+  &[x-placement='right'] .#{$arrow} {
+    top: 50%;
+    margin-top: -$arrow-width;
+  }
+  &[x-placement='right-start'] .#{$arrow} {
+    top: 8px;
+  }
+  &[x-placement='right-end'] .#{$arrow} {
+    bottom: 8px;
+  }
+
+  &[x-placement^='left'] .#{$arrow} {
+    right: $arrow-distance - $arrow-width;
+    border-width: $arrow-width 0 $arrow-width $arrow-width;
+    border-left-color: $bg;
+  }
+  &[x-placement='left'] .#{$arrow} {
+    top: 50%;
+    margin-top: -$arrow-width;
+  }
+  &[x-placement='left-start'] .#{$arrow} {
+    top: 8px;
+  }
+  &[x-placement='left-end'] .#{$arrow} {
+    bottom: 8px;
+  }
+
+  &[x-placement^='bottom'] .#{$arrow} {
+    top: $arrow-distance - $arrow-width;
+    border-width: 0 $arrow-width $arrow-width;
+    border-bottom-color: $bg;
+  }
+  &[x-placement='bottom'] .#{$arrow} {
+    left: 50%;
+    margin-left: -$arrow-width;
+  }
+  &[x-placement='bottom-start'] .#{$arrow} {
+    left: 16px;
+  }
+  &[x-placement='bottom-end'] .#{$arrow} {
+    right: 16px;
+  }
+}
