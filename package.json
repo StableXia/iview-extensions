@@ -1,6 +1,6 @@
 {
   "name": "iview-extensions",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "iview组件库扩展",
   "main": "lib/iview-extensions.js",
   "scripts": {
